@@ -7,7 +7,7 @@ library(rtweet)
 
 
 #List of target users from which you want to extract data
-users <- list("@petedoom","@IPODave","@holiday613")
+users <- list("@atelania", "@wallstreetbets_","@Brady_Atlas","@wsbmod","@MrMikeInvesting","@Manpree31938145","@UncleRyanAZ","@Alexs_trades","@stoolpresidente")
 
 
 #Lookup friends of target users above and store their twitter IDs in a list

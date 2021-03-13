@@ -19,7 +19,8 @@ library(gridExtra)
 users <- list("@MrZackMorris","@Hugh_Henne","@InvestorsLive","@johnwelshtrades","@TheLioncom",
               "@incrediblebob12","@AdamHGrimes","@Amp_Trades","@TraderTexMex",
               "@BioStocks","@MadMraket","@PJ_Matlock","@LadeBackk","@TrendSpider",
-              "@holiday613","@petedoom","@IPODave")
+              "@holiday613","@petedoom","@IPODave","@atelania", "@wallstreetbets_",
+              "@Brady_Atlas","@wsbmod","@MrMikeInvesting","@Manpree31938145","@UncleRyanAZ","@Alexs_trades","@stoolpresidente")
 
 #extract tweets of users above (max n=3200 per user)
 Users_list <- lapply(users, get_timeline,n=500)
