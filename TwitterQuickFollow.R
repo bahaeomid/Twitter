@@ -2,12 +2,11 @@
 library(rtweet)
 
 ###Note: These have been complete already
-#"@MrZackMorris","@Hugh_Henne","@InvestorsLive","@johnwelshtrades","@TheLioncom","@incrediblebob12,@The_Analyst_81","@PJ_Matlock","@buysellshort","@Amp_Trades","@irdoj75","@AdamHGrimes"
-
+#"@MrMikeInvesting","@Manpree31938145","@UncleRyanAZ","@Alexs_trades","@wsbmod","@Brady_Atlas","@wallstreetbets_","@atelania","@MrZackMorris","@Hugh_Henne","@InvestorsLive","@johnwelshtrades","@TheLioncom","@incrediblebob12,@The_Analyst_81","@PJ_Matlock","@buysellshort","@Amp_Trades","@irdoj75","@AdamHGrimes"
 
 
 #List of target users from which you want to extract data
-users <- list("@atelania", "@wallstreetbets_","@Brady_Atlas","@wsbmod","@MrMikeInvesting","@Manpree31938145","@UncleRyanAZ","@Alexs_trades","@stoolpresidente")
+users <- list()
 
 
 #Lookup friends of target users above and store their twitter IDs in a list

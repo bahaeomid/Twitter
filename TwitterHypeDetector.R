@@ -25,6 +25,11 @@ users <- list("@MrZackMorris","@Hugh_Henne","@InvestorsLive","@johnwelshtrades",
 #extract tweets of users above (max n=3200 per user)
 Users_list <- lapply(users, get_timeline,n=500)
 
+#remove list elements that are empty.
+Users_list <- lapply(Users_list, function(x) {if(sum(dim(x))!=0) x else NULL})
+Users_list <- Users_list[!sapply(Users_list,is.null)]
+
+
 #convert filter out columns of interest)
 Syms_list <- lapply(Users_list, select, c("symbols","created_at"))
 
@@ -177,10 +182,10 @@ grobs_all <- Filter(Negate(is.null),grobs_all) #filter out any empty grobs
 
 #output to pdf 
 pages <- marrangeGrob(grobs= grobs_all, nrow=1, ncol=2, top = paste0("Print Timestamp: ",Sys.time())) #2plots side by side on each page
-ggsave(paste0("C:\\Users\\B\\Desktop\\T\\Twitter Hype Detector\\",Sys.Date(),".pdf"),pages,width = 17, height = 11)
+ggsave(paste0("C:\\Users\\bahae\\Desktop\\R files\\Twitter\\",Sys.Date(),".pdf"),pages,width = 17, height = 11)
 
 #output table to csv
-write_csv(freq_master,paste0("C:\\Users\\B\\Desktop\\T\\Twitter Hype Detector\\",Sys.Date(),".csv"))
+write_csv(freq_master,paste0("C:\\Users\\bahae\\Desktop\\R files\\Twitter\\",Sys.Date(),".csv"))
 
 
 
